@@ -1,0 +1,105 @@
+.container 
+{
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.register
+{
+    height: 700px;
+    width: 500px;
+}
+
+.title-container
+{
+    height: 100px;
+    width: 100%;
+    background-color:#403d39;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px 20px 0px 0px;
+}
+
+svg
+{
+    height: 50px;
+    width: 50px;
+    background-color:#ccc5b9;
+    border-radius: 50px;
+}
+
+.input-container
+{
+    height: 400px;
+    width: 100%;
+    background-color: #ccc5b9;
+    display: block;
+}
+
+.input
+{
+    height: 25%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+input
+{
+    height: 40px;
+    width: 75%;
+    padding-left: 50px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+}
+
+.button-container
+{
+    height: 200px;
+    width: 100%;
+    background-color:#ccc5b9;
+    display: block;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.button
+{
+    height: 50%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+button
+{
+    height: 50px;
+    width: 50%;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    background-color: #403d39;
+    color: white;
+}
+
+button:hover
+{
+    cursor: pointer;
+    background-color: #363431;
+}
+
+.login
+{
+    height:  50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
