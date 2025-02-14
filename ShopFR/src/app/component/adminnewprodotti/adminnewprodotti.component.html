@@ -1,0 +1,21 @@
+<form [formGroup]="insertForm" (ngSubmit)="submit()">
+    <div class="container">
+
+    <div class="input-container">
+        <label>Nome Prodotto</label>
+        <input type="text" placeholder="Nome Prodott" formControlName="nome_prodotti">
+    </div>
+    <div class="input-container">
+        <label>Prezzo</label>
+        <input type="text" placeholder="prezzo" formControlName="prezzo">
+    </div>
+    <div class="file-container">
+        <label for="productImage">Immagine Prodotto</label>
+        <input type="file" id="productImage" (change)="onFileSelected($event)" >
+    </div>
+    <div class="button-container">
+        <button type="submit" [disabled] = "!insertForm.valid">invia</button>
+    </div>  
+    </div>
+
+</form>

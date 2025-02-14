@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="icon">  
+        <svg  (click)="esc()" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+    </div>
+    <div class="card-img">
+        <img src="http://localhost:8080{{prodotto.img_prodotti}}" >
+    </div> 
+    <div class="card-info">
+        <div class="nome-prodotto">
+            <p >{{prodotto.nome_prodotti}}</p>
+        </div>
+        <div class="prezzo">
+            <p c>{{prodotto.prezzo | currency : 'EUR'}}</p>
+        </div>
+    </div>
+</div>

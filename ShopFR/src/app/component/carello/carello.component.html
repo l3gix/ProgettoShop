@@ -1,1 +1,22 @@
-<p>carello works!</p>
+<div class="container"> 
+        <div>
+        <div class="card" *ngFor="let prodotto of gruppiPerProdotto">
+            <div class="card-quantita">
+                <p>x{{prodotto[1].prodotti.length}}</p>
+            </div>
+            <div class="card-img">
+                <img src="http://localhost:8080{{prodotto[1].img_prodotti}}">
+            </div> 
+            <div class="card-info">
+                <p class="nome-prodotto">{{prodotto[1].nome_prodotti}}</p>
+                <p class="prezzo">{{prodotto[1].prezzo | currency : 'EUR'}}</p>
+            </div>
+            <div class="card-button">
+                <button class="button" (click)="delteOrdine(prodotto[1].prodotti[0].id)">Elimina Prodotto</button>
+            </div>
+        </div>
+    </div> 
+        <div class="totale">
+            <p>Totale: {{getSaldoTotale() | currency : 'EUR'}}</p>
+    </div>
+</div>

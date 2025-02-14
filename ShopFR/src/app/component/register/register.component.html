@@ -6,21 +6,29 @@
         </div>
         <div class="input-container">
             <div class="input">
-                <input type="text" placeholder="nome" formControlName="nome">
+                <input type="text" placeholder="nome" formControlName="nome"
+                [ngStyle]="{'border': validateInputControl(registerGroup, 'nome') ? '3px solid red' : ''}"
+                >
             </div>
             <div class="input">
-                <input type="text" placeholder="cognome" formControlName="cognome">
+                <input type="text" placeholder="cognome" formControlName="cognome"
+                [ngStyle]="{'border': validateInputControl(registerGroup, 'cognome') ? '3px solid red' : ''}"
+                >
             </div>
             <div class="input">
-                <input type="text" placeholder="username" formControlName="username">
+                <input type="text" placeholder="username" formControlName="username"
+                [ngStyle]="{'border': validateInputControl(registerGroup, 'username') ? '3px solid red' : ''}"
+                >
             </div>
             <div class="input">
-                <input type="text" placeholder="password" formControlName="password">
+                <input type="text" placeholder="password" formControlName="password"
+                [ngStyle]="{'border': validateInputControl(registerGroup, 'password') ? '3px solid red' : ''}"
+                >
             </div>
         </div>
         <div class="button-container">
-            <div class="button" type="submit">
-                <button>Login</button>
+            <div class="button" >
+                <button type="submit" [disabled] = "!registerGroup.valid">Register</button>
             </div>
             <div class="login">
                 <p>Sei gia registrato? <a routerLink="/login">Login</a></p>

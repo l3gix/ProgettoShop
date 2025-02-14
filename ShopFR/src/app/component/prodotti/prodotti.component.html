@@ -1,1 +1,31 @@
-<p>prodotti works!</p>
+<div class="serch-bar">
+    <input type="text" placeholder="Cerca Prodotti" (input)="search($event)">
+</div>
+<div class="container-prodotti">
+    <div class="container">
+        <div class="card" *ngFor="let prodotto of ListProdottiCercati != null ? ListProdottiCercati : listProdotti  ">
+            <div class="card-img">
+                <img src="http://localhost:8080{{prodotto.img_prodotti}}" (click)="goToProdotto(prodotto.id_prodotti)">
+            </div> 
+            <div class="card-info">
+                <div class="nome-prodotto">
+                    <p >{{prodotto.nome_prodotti}}</p>
+                </div>
+                <div class="prezzo">
+                    <p c>{{prodotto.prezzo | currency : 'EUR'}}</p>
+                </div>
+            </div>
+            <div class="card-button">
+                <button class="button" (click)="addToCar(prodotto.id_prodotti)">Carrello</button>
+            </div>
+        </div>
+    </div>
+<div class="prodotto-schermata" *ngIf="getVisible()">   
+    <router-outlet></router-outlet>
+</div>
+</div>
+
+
+
+
+

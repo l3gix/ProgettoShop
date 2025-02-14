@@ -1,0 +1,18 @@
+<div class="serch-bar">
+    <input type="text" placeholder="Cerca Prodotti" (input)="search($event)">
+</div>
+<div class="container">
+    <div class="card" *ngFor="let prodotto of listProdottiCercati != null ? listProdottiCercati : listProdotti">
+        <div class="card-img">
+            <img src="http://localhost:8080{{prodotto.img_prodotti}}">
+        </div> 
+        <div class="card-info">
+            <p class="nome-prodotto">{{prodotto.nome_prodotti}}</p>
+            <p class="prezzo">{{prodotto.prezzo | currency : 'EUR'}}</p>
+        </div>
+        <div class="card-button">
+            <button class="button" (click)="deleteProdotto(prodotto.id_prodotti, prodotto.img_prodotti)">Elemina prodotto</button>
+        </div>
+    </div>
+</div>
+
