@@ -76,14 +76,6 @@ npm start
 
 L'app sarà accessibile all'indirizzo `http://localhost:3000` (o la porta configurata).
 
-## 📌 Contribuire
-
-1. **Forka** il progetto  
-2. **Crea una branch** (`git checkout -b feature-nuova`)  
-3. **Apporta le modifiche**  
-4. **Committa le modifiche** (`git commit -m "Aggiunta nuova feature"`)  
-5. **Push** (`git push origin feature-nuova`)  
-6. Apri una **Pull Request** 🚀  
 
 ## 📜 Licenza
 
